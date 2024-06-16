@@ -1,0 +1,45 @@
+.game-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.score-time {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: black;
+}
+
+.tiles-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.tile {
+    width: 80px;
+    height: 80px;
+    background: #ff6f61;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.tile.flipped, .tile.matched {
+    background: #ff4c3b;
+    transform: rotateY(180deg);
+}
+
+.tile:hover {
+    background: #ff4c3b;
+}
